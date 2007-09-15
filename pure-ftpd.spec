@@ -64,7 +64,7 @@ HARDWARE="Hardware platform:      $(uname -m)"
 LIBRARY="Library:                $(rpm -q glibc)"
 OSVERSION="Linux Kernel:           $(uname -sr)"
 PACKAGER="Packager:               %{packager}"
-MDKRELEASE="Mandrakelinux release: $(cat /etc/mandrake-release)"
+MDKRELEASE="Mandriva Linux release: $(cat /etc/mandriva-release)"
 RPMVERSION="RPM Version:            $(rpm -q rpm)"
 
 cat <<EOF >>$RPM_BUILD_DIR/%{name}-%{version}/README.RPM
