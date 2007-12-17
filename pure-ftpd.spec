@@ -23,7 +23,6 @@ BuildRequires:	pam-devel
 BuildRequires:	openldap-devel
 BuildRequires:	MySQL-devel
 BuildRequires:	postgresql-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Pure-FTPd is a fast, production-quality, standard-comformant FTP server,
