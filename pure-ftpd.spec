@@ -54,7 +54,6 @@ This package provides anonymous upload support for pure-ftpd.
 %prep
 
 %setup -q -n %{name}-%{version}
-%setup -q -D -T -a 2
 %patch -p1 -b .mdkconf
 
 # make README.RPM:
