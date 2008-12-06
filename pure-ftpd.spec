@@ -1,7 +1,7 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
 Version:	1.0.21
-Release:	%mkrel 8
+Release:	%mkrel 9
 License:	GPL
 Group:		System/Servers
 URL:		http://www.pureftpd.org
@@ -23,7 +23,7 @@ BuildRequires:	pam-devel
 BuildRequires:	openldap-devel
 BuildRequires:	mysql-devel
 BuildRequires:	postgresql-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Pure-FTPd is a fast, production-quality, standard-comformant FTP server,
