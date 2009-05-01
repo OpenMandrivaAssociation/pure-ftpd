@@ -1,7 +1,7 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.21
-Release:	%mkrel 9
+Version:	1.0.22
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
 URL:		http://www.pureftpd.org
@@ -54,7 +54,7 @@ This package provides anonymous upload support for pure-ftpd.
 %prep
 
 %setup -q -n %{name}-%{version}
-%patch -p1 -b .mdkconf
+%patch0 -p1 -b .mdkconf
 
 # make README.RPM:
 
@@ -197,7 +197,7 @@ rm -rf %{buildroot}
 %defattr(-, root, root)
 %doc FAQ THANKS README.Authentication-Modules README.Windows README.Virtual-Users README.Debian 
 %doc README README.Contrib README.Configuration-File AUTHORS CONTACT HISTORY NEWS README.LDAP
-%doc README.PGSQL README.MySQL README.Netfilter pure-ftpd.png contrib/pure-vpopauth.pl
+%doc README.PGSQL README.MySQL pure-ftpd.png contrib/pure-vpopauth.pl
 %doc contrib/pure-stat.pl pureftpd.schema README.RPM
 %attr(0755,root,root) %{_initrddir}/pure-ftpd
 
