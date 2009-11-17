@@ -1,6 +1,6 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.24
+Version:	1.0.26
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
