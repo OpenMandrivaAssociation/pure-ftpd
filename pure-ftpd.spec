@@ -23,6 +23,7 @@ BuildRequires:	pam-devel
 BuildRequires:	openldap-devel
 BuildRequires:	mysql-devel
 BuildRequires:	postgresql-devel
+BuildRequires:	openssl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -113,7 +114,8 @@ cp %{SOURCE6} pure-ftpd.pam
     --with-virtualchroot \
     --with-extauth \
     --with-largefile \
-    --with-rfc2640
+    --with-rfc2640 \
+    --with-tls
 
 %make
 
