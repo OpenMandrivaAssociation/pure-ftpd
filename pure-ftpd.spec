@@ -1,6 +1,6 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.30
+Version:	1.0.31
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
@@ -13,7 +13,6 @@ Source4:	pure-ftpd.service
 Source5:	pure-ftpd.pam-0.77
 Source6:        pure-ftpd.pam
 Patch0:		pure-ftpd.mdkconf.patch
-Patch1:		pure-ftpd-1.0.30-mysql5510_link_fix.diff
 Provides:	ftp-server ftpserver
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
@@ -57,7 +56,6 @@ This package provides anonymous upload support for pure-ftpd.
 
 %setup -q -n %{name}-%{version}
 %patch0 -p1 -b .mdkconf
-%patch1 -p0 -b .mysql5510_link_fix
 
 # nuke mac files
 find -name "\._*" | xargs rm -f
