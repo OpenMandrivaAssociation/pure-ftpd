@@ -1,6 +1,6 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.32
+Version:	1.0.34
 Release:	%mkrel 1
 License:	GPL
 Group:		System/Servers
@@ -10,7 +10,6 @@ Source1:	pure-ftpd.init
 Source2:	pure-ftpd.logrotate
 Source3:	pure-ftpd-xinetd
 Source4:	pure-ftpd.service
-Source5:	pure-ftpd.pam-0.77
 Source6:        pure-ftpd.pam
 Patch0:		pure-ftpd.mdkconf.patch
 Provides:	ftp-server ftpserver
@@ -60,37 +59,9 @@ This package provides anonymous upload support for pure-ftpd.
 # nuke mac files
 find -name "\._*" | xargs rm -f
 
-# make README.RPM:
-
-COMPILER="Compiler:               $(gcc -v 2>& 1|tail -1)"
-HARDWARE="Hardware platform:      $(uname -m)"
-LIBRARY="Library:                $(rpm -q glibc)"
-OSVERSION="Linux Kernel:           $(uname -sr)"
-PACKAGER="Packager:               %{packager}"
-MDKRELEASE="Mandriva Linux release: $(cat /etc/mandriva-release)"
-RPMVERSION="RPM Version:            $(rpm -q rpm)"
-
-cat <<EOF >>$RPM_BUILD_DIR/%{name}-%{version}/README.RPM
-The pure-ftpd rpm packages were created in the following build environment:
-
-$MDKRELEASE
-$HARDWARE
-$OSVERSION
-$LIBRARY
-$COMPILER
-$RPMVERSION
-$PACKAGER
-
-EOF
-
 cp %{SOURCE3} pure-ftpd-xinetd
 cp %{SOURCE4} pure-ftpd.service
-
-%if %{mdkversion} < 200610
-cp %{SOURCE5} pure-ftpd.pam
-%else
 cp %{SOURCE6} pure-ftpd.pam
-%endif
 
 %build
 %configure2_5x \
@@ -203,7 +174,7 @@ rm -rf %{buildroot}
 %doc FAQ THANKS README.Authentication-Modules README.Windows README.Virtual-Users README.Debian 
 %doc README README.Contrib README.Configuration-File AUTHORS CONTACT HISTORY NEWS README.LDAP
 %doc README.PGSQL README.MySQL pure-ftpd.png contrib/pure-vpopauth.pl
-%doc contrib/pure-stat.pl pureftpd.schema README.RPM
+%doc contrib/pure-stat.pl pureftpd.schema
 %attr(0755,root,root) %{_initrddir}/pure-ftpd
 
 %config(noreplace) %{_sysconfdir}/%{name}/pure-ftpd.conf
