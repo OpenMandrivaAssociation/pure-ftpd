@@ -1,7 +1,7 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.34
-Release:	%mkrel 1
+Version:	1.0.35
+Release:	1
 License:	GPL
 Group:		System/Servers
 URL:		http://www.pureftpd.org
@@ -23,7 +23,6 @@ BuildRequires:	openldap-devel
 BuildRequires:	mysql-devel
 BuildRequires:	postgresql-devel
 BuildRequires:	openssl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Pure-FTPd is a fast, production-quality, standard-comformant FTP server,
@@ -166,11 +165,7 @@ done
 %preun
 %_preun_service pure-ftpd
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-, root, root)
 %doc FAQ THANKS README.Authentication-Modules README.Windows README.Virtual-Users README.Debian 
 %doc README README.Contrib README.Configuration-File AUTHORS CONTACT HISTORY NEWS README.LDAP
 %doc README.PGSQL README.MySQL pure-ftpd.png contrib/pure-vpopauth.pl
@@ -198,12 +193,10 @@ rm -rf %{buildroot}
 %{_sbindir}/pure-quotacheck
 %{_sbindir}/pure-authd
 
-%attr(644,root,root)%{_mandir}/man8/*
+%attr(644,root,root) %{_mandir}/man8/*
 
 %files anonymous
-%defattr(-, root, root)
 %dir /var/ftp/pub/
 
 %files anon-upload
-%defattr(777, root, root)
-%dir /var/ftp/incoming/
+%attr(0777,root,root) %dir /var/ftp/incoming
