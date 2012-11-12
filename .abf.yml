@@ -1,0 +1,7 @@
+sources:
+  "pure-ftpd-1.0.36.tar.gz:"	bfc9141f696f27f1e5cc88f3c3e85e6cc67885ec
+  "pure-ftpd.init:"	7b8699f824a38568a5b144fa87db557f9b8f66e0
+  "pure-ftpd.logrotate:"	f911d850f6191b6a017eed5afcbb95c10e71391f
+  "pure-ftpd.pam:"	f82e09c68625b7225264c2697a4d5475fd5a53da
+  "pure-ftpd.service:"	d9d5148e908c14e5062d3f5372d0c611dbc4ffec
+  "pure-ftpd-xinetd:"	57d57a7280205e2555d830b9999f88005575339a
