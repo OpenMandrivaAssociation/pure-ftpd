@@ -1,2 +1,5 @@
+removed_sources:
+  pure-ftpd-1.0.36.tar.gz: bfc9141f696f27f1e5cc88f3c3e85e6cc67885ec
 sources:
-  "pure-ftpd-1.0.36.tar.gz": bfc9141f696f27f1e5cc88f3c3e85e6cc67885ec
+  pure-ftpd-1.0.42.tar.gz: 5a8e4bd0801331f5f58023ffb586eefea9aa4950
+  pure-ftpd.service: d9d5148e908c14e5062d3f5372d0c611dbc4ffec

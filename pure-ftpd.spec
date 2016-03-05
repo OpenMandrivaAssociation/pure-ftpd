@@ -1,7 +1,7 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.36
-Release:	9
+Version:	1.0.42
+Release:	1
 License:	GPLv2
 Group:		System/Servers
 Url:		http://www.pureftpd.org
@@ -166,7 +166,7 @@ done
 %_preun_service pure-ftpd
 
 %files
-%doc FAQ THANKS README.Authentication-Modules README.Windows README.Virtual-Users README.Debian 
+%doc FAQ THANKS README.Authentication-Modules README.Windows README.Virtual-Users
 %doc README README.Contrib README.Configuration-File AUTHORS CONTACT HISTORY NEWS README.LDAP
 %doc README.PGSQL README.MySQL pure-ftpd.png contrib/pure-vpopauth.pl
 %doc contrib/pure-stat.pl pureftpd.schema
