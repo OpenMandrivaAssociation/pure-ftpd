@@ -55,7 +55,7 @@ This package provides anonymous upload support for pure-ftpd.
 %prep
 
 %setup -q
-%apply_patches
+%autopatch -p1
 
 # nuke mac files
 find -name "\._*" | xargs rm -f
