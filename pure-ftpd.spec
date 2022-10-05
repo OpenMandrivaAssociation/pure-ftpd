@@ -1,7 +1,7 @@
 Summary:	Lightweight, fast and secure FTP server
 Name:		pure-ftpd
-Version:	1.0.42
-Release:	3
+Version:	1.0.51
+Release:	1
 License:	GPLv2
 Group:		System/Servers
 Url:		http://www.pureftpd.org
@@ -103,9 +103,7 @@ install -d -m 755 %{buildroot}%{_sysconfdir}/rc.d/init.d/
 install -d -m 755 %{buildroot}%{_sysconfdir}/%{name}
 
 # Conf 
-install -m 755 configuration-file/pure-config.pl %{buildroot}%{_sbindir}
-install -m 644 configuration-file/pure-ftpd.conf %{buildroot}%{_sysconfdir}/%{name}
-install -m 755 configuration-file/pure-config.py %{buildroot}%{_sbindir}
+install -m 644 pure-ftpd.conf %{buildroot}%{_sysconfdir}/%{name}
 install -m 644 pureftpd-ldap.conf %{buildroot}%{_sysconfdir}/%{name}
 install -m 644 pureftpd-mysql.conf %{buildroot}%{_sysconfdir}/%{name}
 install -m 644 pureftpd-pgsql.conf %{buildroot}%{_sysconfdir}/%{name}
@@ -166,10 +164,7 @@ done
 %_preun_service pure-ftpd
 
 %files
-%doc FAQ THANKS README.Authentication-Modules README.Windows README.Virtual-Users
-%doc README README.Contrib README.Configuration-File AUTHORS CONTACT HISTORY NEWS README.LDAP
-%doc README.PGSQL README.MySQL pure-ftpd.png contrib/pure-vpopauth.pl
-%doc contrib/pure-stat.pl pureftpd.schema
+%doc %{_docdir}/%{name}
 %attr(0755,root,root) %{_initrddir}/pure-ftpd
 
 %config(noreplace) %{_sysconfdir}/%{name}/pure-ftpd.conf
@@ -181,11 +176,10 @@ done
 %config(noreplace) %{_sysconfdir}/xinetd.d/pure-ftpd-xinetd
 %config(noreplace) %{_sysconfdir}/avahi/services/%{name}.service
 
+%{_bindir}/pure-certd
 %{_bindir}/pure-pw
 %{_bindir}/pure-pwconvert
 %{_bindir}/pure-statsdecode
-%{_sbindir}/pure-config.pl
-%{_sbindir}/pure-config.py
 %{_sbindir}/pure-ftpd
 %{_sbindir}/pure-ftpwho
 %{_sbindir}/pure-uploadscript
@@ -200,4 +194,3 @@ done
 
 %files anon-upload
 %attr(0777,root,root) %dir /var/ftp/incoming
-

@@ -1,59 +1,49 @@
-diff -ur pure-ftpd-1.0.22.orig/configuration-file/pure-ftpd.conf.in pure-ftpd-1.0.22/configuration-file/pure-ftpd.conf.in
---- pure-ftpd-1.0.22.orig/configuration-file/pure-ftpd.conf.in	2009-04-30 07:51:06.000000000 +0200
-+++ pure-ftpd-1.0.22/configuration-file/pure-ftpd.conf.in	2009-05-01 22:44:52.000000000 +0200
-@@ -9,7 +9,7 @@
- # instead of command-line options, please run the
- # following command :
- #
--# @prefix@/sbin/pure-config.pl @prefix@/etc/pure-ftpd.conf
-+# /usr/sbin/pure-config.pl /etc/pure-ftpd/pure-ftpd.conf
- #
- # Please don't forget to have a look at documentation at
- # http://www.pureftpd.org/documentation.shtml for a complete list of
-@@ -107,23 +107,23 @@
+diff -up pure-ftpd-1.0.51/pure-ftpd.conf.in.1~ pure-ftpd-1.0.51/pure-ftpd.conf.in
+--- pure-ftpd-1.0.51/pure-ftpd.conf.in.1~	2022-10-05 23:17:04.705665297 +0200
++++ pure-ftpd-1.0.51/pure-ftpd.conf.in	2022-10-05 23:19:06.625471794 +0200
+@@ -106,23 +106,23 @@ MaxIdleTime                  15
  
  # LDAP configuration file (see README.LDAP)
  
--# LDAPConfigFile                /etc/pureftpd-ldap.conf
-+# LDAPConfigFile                /etc/pure-ftpd/pureftpd-ldap.conf
+-# LDAPConfigFile               /etc/pureftpd-ldap.conf
++# LDAPConfigFile               /etc/pure-ftpd/pureftpd-ldap.conf
  
  
  
  # MySQL configuration file (see README.MySQL)
  
--# MySQLConfigFile               /etc/pureftpd-mysql.conf
-+# MySQLConfigFile               /etc/pure-ftpd/pureftpd-mysql.conf
+-# MySQLConfigFile              /etc/pureftpd-mysql.conf
++# MySQLConfigFile              /etc/pure-ftpd/pureftpd-mysql.conf
  
  
- # Postgres configuration file (see README.PGSQL)
+ # PostgreSQL configuration file (see README.PGSQL)
  
--# PGSQLConfigFile               /etc/pureftpd-pgsql.conf
-+# PGSQLConfigFile               /etc/pure-ftpd/pureftpd-pgsql.conf
+-# PGSQLConfigFile              /etc/pureftpd-pgsql.conf
++# PGSQLConfigFile              /etc/pure-ftpd/pureftpd-pgsql.conf
  
  
  # PureDB user database (see README.Virtual-Users)
  
--# PureDB                        /etc/pureftpd.pdb
-+# PureDB                        /etc/pure-ftpd/pureftpd.pdb
+-# PureDB                       /etc/pureftpd.pdb
++# PureDB                       /etc/pure-ftpd/pureftpd.pdb
  
  
  # Path to pure-authd socket (see README.Authentication-Modules)
-@@ -134,7 +134,7 @@
+@@ -133,7 +133,7 @@ MaxIdleTime                  15
  
  # If you want to enable PAM authentication, uncomment the following line
  
--# PAMAuthentication             yes
-+PAMAuthentication             yes
+-# PAMAuthentication            yes
++PAMAuthentication            yes
  
  
  
-@@ -301,7 +301,7 @@
- # fw.c9x.org - jedi [13/Dec/1975:19:36:39] "GET /ftp/linux.tar.bz2" 200 21809338
- # This log file can then be processed by www traffic analyzers.
+@@ -301,7 +301,7 @@ AnonymousCantUpload          no
+ # fw.c9x.org - jedi [13/Apr/2017:19:36:39] "GET /ftp/linux.tar.bz2" 200 21809338
+ # This log file can then be processed by common HTTP traffic analyzers.
  
--# AltLog                     clf:/var/log/pureftpd.log
-+AltLog                     clf:/var/log/pureftpd.log
+-# AltLog                       clf:/var/log/pureftpd.log
++AltLog                       clf:/var/log/pureftpd.log
  
  
  
-Only in pure-ftpd-1.0.22/configuration-file: pure-ftpd.conf.in.orig
