@@ -4,7 +4,7 @@ Version:	1.0.51
 Release:	2
 License:	GPLv2
 Group:		System/Servers
-Url:		http://www.pureftpd.org
+Url:		https://www.pureftpd.org
 Source0:	http://download.pureftpd.org/pub/pure-ftpd/releases/%{name}-%{version}.tar.gz
 Source1:	pure-ftpd.init
 Source2:	pure-ftpd.logrotate
