@@ -12,6 +12,11 @@ Source3:	pure-ftpd-xinetd
 Source4:	pure-ftpd.service
 Source6:	pure-ftpd.pam
 Patch0:		pure-ftpd.mdkconf.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	mysql-devel
 BuildRequires:	pam-devel
 BuildRequires:	openldap-devel
