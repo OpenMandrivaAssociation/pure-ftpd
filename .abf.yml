@@ -1,3 +1,4 @@
 sources:
-  pure-ftpd.service: d9d5148e908c14e5062d3f5372d0c611dbc4ffec
   pure-ftpd-1.0.51.tar.gz: 6c0fa75ac726acd8573b3b3a2b2ba3672d40da3f
+  pure-ftpd-1.0.54.tar.gz: 49f0480f3667f9d6f8aacf5655d6704d4411d2fb
+  pure-ftpd.service: d9d5148e908c14e5062d3f5372d0c611dbc4ffec
